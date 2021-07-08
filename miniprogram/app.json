@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home"
+
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "饿了么您",
+   "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "点个外卖",
+        "iconPath": "images/图标/牛排.png",
+        "selectedIconPath": "images/图标/章鱼小丸子.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "吃什么鸭",
+        "iconPath": "images/图标/汉堡.png",
+        "selectedIconPath": "images/图标/匹萨.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

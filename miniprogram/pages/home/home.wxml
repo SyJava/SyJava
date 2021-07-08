@@ -1,0 +1,36 @@
+
+    <!-- 用户头像 -->
+    <view>
+    <view class="user-info-avatar">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <!-- 用户姓名 -->
+    <view class="user-info-name">
+      <open-data type="userNickName"></open-data>
+    </view>
+</view>
+<!-- 食物列表 -->
+<view class="food">
+    <text  bind:tap="btnEvent">{{food}}</text>
+</view>
+<view class="flex1">
+<!-- 开始按钮 -->
+    <view  bind:tap="btnEvent">
+    <text>{{start}}</text>
+    </view>
+<text bindtap="eject" class="zdy">[自定义菜单]</text>
+</view>
+
+<!-- 弹窗蒙版 -->
+<view class="model" catchtouchmove='preventTouchMove' wx:if='{{showModal}}'></view>
+<view class="modalDlg" catchtouchmove='preventTouchMove' wx:if='{{showModal}}'>
+  <view class='windowRow'>
+    <text class='userTitle'>添加菜名</text>
+    <text class="zdy">菜名请用空格隔开</text>
+    <view class='back' bindtap='back'>返回</view>
+  </view>
+  <view style="width:100%" class='wishName'>
+    <textarea style="width:100%" bindinput='foodInput' value="{{foodList}}" placeholder='请输入菜名' placeholder-class="holder_cls" class='wish_put'></textarea>
+  </view>
+  <view style="width:94%" class='wishbnt' bindtap='addFood'>确定</view>
+</view>
